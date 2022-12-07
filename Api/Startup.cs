@@ -96,11 +96,13 @@ namespace Api
             services.AddScoped<DbContext, LmyFrameworkDBContext>();
 
             ////Repositories
-            services.AddScoped<IGenericRepository<Users>, GenericRepository<Users>>();
-            services.AddScoped<IGenericRepository<Roles>, GenericRepository<Roles>>();
-            services.AddScoped<IGenericRepository<UserRoles>, GenericRepository<UserRoles>>();
-            services.AddScoped<IGenericRepository<Projects>, GenericRepository<Projects>>();
-            services.AddScoped<IGenericRepository<ClientErrors>, GenericRepository<ClientErrors>>();
+            services.AddScoped<IGenericRepository<Users>, GenericRepository<Users, LmyFrameworkDBContext>>();
+            services.AddScoped<IGenericRepository<Roles>, GenericRepository<Roles, LmyFrameworkDBContext>>();
+            services.AddScoped<IGenericRepository<UserRoles>, GenericRepository<UserRoles, LmyFrameworkDBContext>>();
+            services.AddScoped<IGenericRepository<Projects>, GenericRepository<Projects, LmyFrameworkDBContext>>();
+            services.AddScoped<IGenericRepository<ClientErrors>, GenericRepository<ClientErrors, LmyFrameworkDBContext>>();
+
+            services.AddScoped<IGenericUnitOfwork<LmyFrameworkDBContext>, GenericUnitOfWork<LmyFrameworkDBContext>>();
 
             ////services
             services.AddScoped<ICommonService, CommonServices>();

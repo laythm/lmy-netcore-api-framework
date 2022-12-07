@@ -5,6 +5,7 @@ using Common.Helpers;
 using Common.Interfaces;
 using Common.Models.Common;
 using Common.Models.Projects;
+using Infrastructure;
 using Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -26,16 +27,19 @@ namespace Services.Services
 
     public class ProjectsService : IProjectsService
     {
-        DbContext _dbContext;
+        private readonly IRequestContext _requestContext;
+        private readonly IGenericUnitOfwork<LmyFrameworkDBContext> _unitOfWork;
         private readonly IGenericRepository<Projects> _repoProjects;
 
         IConfiguration _configuration;
 
-        public ProjectsService(DbContext dbContext,
+        public ProjectsService(IRequestContext requestContext,
+            IGenericUnitOfwork<LmyFrameworkDBContext> unitOfWork,
             IGenericRepository<Projects> repoProjects,
             IConfiguration configuration)
         {
-            _dbContext = dbContext;
+            _requestContext = requestContext;
+            _unitOfWork = unitOfWork;
             _repoProjects = repoProjects;
             _configuration = configuration;
         }
@@ -138,7 +142,7 @@ namespace Services.Services
                     return projectModel;
                 }
 
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
                 Projects project = new Projects();
 
                 Mapper.Fill(projectModel, project, x => x.CreatedBy, x => x.CreationDate, x => x.ModifiedBy, x => x.ModifiedDate);
@@ -147,14 +151,15 @@ namespace Services.Services
 
                 await _repoProjects.InsertAsync(project);
 
-                await _dbContext.SaveChangesAsync();
-                await _dbContext.Database.CommitTransactionAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
+
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }
@@ -173,21 +178,21 @@ namespace Services.Services
                     return projectModel;
                 }
 
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
                 Projects project = await _repoProjects.Query(x => x.ID == projectModel.ID).FirstOrDefaultAsync();
 
                 Mapper.Fill(projectModel, project, x => x.CreatedBy, x => x.CreationDate, x => x.ModifiedBy, x => x.ModifiedDate);
 
                 await _repoProjects.UpdateAsync(project);
 
-                await _dbContext.SaveChangesAsync();
-                await _dbContext.Database.CommitTransactionAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }
@@ -201,21 +206,21 @@ namespace Services.Services
 
             try
             {
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
 
                 Projects project = await _repoProjects.Query(x => x.ID == id).FirstOrDefaultAsync();
                 project.IsDeleted = true;
 
                 await _repoProjects.UpdateAsync(project);
-                await _dbContext.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
 
-                await _dbContext.Database.CommitTransactionAsync();
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }

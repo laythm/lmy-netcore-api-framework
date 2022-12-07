@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj": {}
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj": {
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -45,7 +48,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

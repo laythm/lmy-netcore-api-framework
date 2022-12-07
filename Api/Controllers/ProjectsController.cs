@@ -15,7 +15,7 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = RolesEnum.Admin)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = RolesEnum.ProjectManager +","+ RolesEnum.Admin)]
     public class ProjectsController : BaseController
     {
         IProjectsService _projectsService;

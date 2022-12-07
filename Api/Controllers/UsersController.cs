@@ -160,5 +160,24 @@ namespace Api.Controllers
 
             return model;
         }
+
+        [AllowAnonymous]
+        [HttpGet("ValidateToken")]
+        public async Task<BaseModel> ValidateToken(string token)
+        {
+            BaseModel model = new BaseModel();
+
+            try
+            {
+                model = await _userService.ValidateToken(token);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                model.AddError(ApiMessages.Error);
+            }
+
+            return model;
+        }
     }
 }

@@ -5,6 +5,7 @@ using Common.Helpers;
 using Common.Interfaces;
 using Common.Models.Common;
 using Common.Models.Users;
+using Infrastructure;
 using Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -26,16 +27,20 @@ namespace Services.Services
 
     public class CommonServices : ICommonService
     {
-        DbContext _dbContext;
+        private readonly IRequestContext _requestContext;
+        private readonly IGenericUnitOfwork<LmyFrameworkDBContext> _unitOfWork;
         private readonly IGenericRepository<ClientErrors> _repoClientErrors;
 
         IConfiguration _configuration;
 
-        public CommonServices(DbContext dbContext,
+        public CommonServices(
+            IRequestContext requestContext,
+            IGenericUnitOfwork<LmyFrameworkDBContext> unitOfWork,
             IGenericRepository<ClientErrors> repoClientErrors,
             IConfiguration configuration)
         {
-            _dbContext = dbContext;
+            _requestContext = requestContext;
+            _unitOfWork = unitOfWork;
             _repoClientErrors = repoClientErrors;
             _configuration = configuration;
         }
@@ -49,7 +54,7 @@ namespace Services.Services
             error.CreationDate = DateTime.UtcNow;
             await _repoClientErrors.InsertAsync(error);
              
-            await _dbContext.SaveChangesAsync();
+            await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
         }
     }
 }

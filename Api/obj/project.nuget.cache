@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k+jiMqMnoswus3w/K80BYrGnar/xVESbltLWhbGQGYN6zEQ48QmBMPQ6ynkrCKpmnJCg0iOVKetTKPCQbMoUkw==",
+  "dgSpecHash": "ERW1QfcmyX7gyZQyFY8lxZ2gx9xMF6C8kO4OZZhkO4dCjSnpghw0OQ+0QVu2vsma8FbNezKJ1xddts+cyL4ipA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.12\\microsoft.aspnetcore.authentication.jwtbearer.3.1.12.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

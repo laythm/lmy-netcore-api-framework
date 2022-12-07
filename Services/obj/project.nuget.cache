@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3v41Iu5WOQdRcLrUn/UFqrzpQ286KWb6AX/A/nctNu5gG7+tPlhqogPY0dMkTCkVmZQwUsuPVe+fD3RyzzFeSA==",
+  "dgSpecHash": "hFoSjW85ND2uDIZGGWL3sZYhCSMGGdYJ7dlfH+DOas9odRS2rCfjUOSXMGEx3koYgQyRTPqVg11CKTfwnH2gKA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",

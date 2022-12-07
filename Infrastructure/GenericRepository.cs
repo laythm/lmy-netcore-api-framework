@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity>
+    public class GenericRepository<TEntity, TContext> : IGenericRepository<TEntity>
+        where TContext : DbContext
      where TEntity : class
     {
-        private DbContext context;
+        private TContext context;
         private DbSet<TEntity> dbSet;
         private IRequestContext userInfo;
-        public GenericRepository(DbContext context)
+        public GenericRepository(TContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();

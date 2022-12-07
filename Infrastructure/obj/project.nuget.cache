@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sI8bjf6lPObl7gMa2ZCxbCLZ2Y9Sbs55CfU/UqQMzcexY2Ie+jvgUEfq8HVRj6i+MSd22Ky0u6lnpaVf5HnMPw==",
+  "dgSpecHash": "lBwRJzNrM22iwZ7DvTLJiWEWKUdYl6IUBQPEX5dAf7qMSeNEmqOOaalqsvP2nQJXqXxZsiArRMWvm/3jp6xnSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.3\\microsoft.entityframeworkcore.abstractions.5.0.3.nupkg.sha512",

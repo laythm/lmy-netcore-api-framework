@@ -16,3 +16,13 @@ C:\Users\admin\Desktop\Github\lmyApiFramework\Common\obj\Debug\netcoreapp3.1\Com
 C:\Users\admin\Desktop\Github\lmyApiFramework\Common\obj\Debug\netcoreapp3.1\Common.dll
 C:\Users\admin\Desktop\Github\lmyApiFramework\Common\obj\Debug\netcoreapp3.1\Common.pdb
 C:\Users\admin\Desktop\Github\lmyApiFramework\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Common\obj\Debug\netcoreapp3.1\Common.pdb

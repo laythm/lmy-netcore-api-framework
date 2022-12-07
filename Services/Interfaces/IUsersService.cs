@@ -13,5 +13,6 @@ namespace Services.Interfaces
         Task<BaseModel> Add(UserModel userModel);
         Task<BaseModel> Edit(UserModel userModel);
         Task<BaseModel> Delete(string id);
+        Task<BaseModel> ValidateToken(string token);
     }
 }

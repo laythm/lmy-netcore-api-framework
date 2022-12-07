@@ -11,17 +11,15 @@ namespace Infrastructure
 {
     public partial class LmyFrameworkDBContext : DbContext
     {
-        IRequestContext _requestContext;
-
+   
         public LmyFrameworkDBContext()
         {
 
         }
 
-        public LmyFrameworkDBContext(DbContextOptions options, IRequestContext requestContext)
+        public LmyFrameworkDBContext(DbContextOptions options)
             : base(options)
-        {
-            _requestContext = requestContext;
+        { 
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -79,53 +77,7 @@ namespace Infrastructure
             });
         }
 
-        public override int SaveChanges()
-        {
-            setTracks();
-            return base.SaveChanges();
-        }
-
-        public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
-        {
-            setTracks();
-            return base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
-        }
-
-        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            setTracks();
-            return base.SaveChangesAsync(cancellationToken);
-        }
-
-        private void setTracks()
-        {
-            var entries = ChangeTracker.Entries().Where(x =>
-            x.Entity is ITrackable || x.Entity is IUserTrackable
-            && (x.State == EntityState.Added || x.State == EntityState.Modified));
-
-            foreach (var entry in entries)
-            {
-                if (entry.Entity is ITrackable)
-                {
-                    if (entry.State == EntityState.Added)
-                    {
-                        ((ITrackable)entry.Entity).CreationDate = DateTime.UtcNow;
-                    }
-
-                    ((ITrackable)entry.Entity).ModifiedDate = DateTime.UtcNow;
-
-                }
-
-                if (entry.Entity is IUserTrackable)
-                {
-                    if (entry.State == EntityState.Added)
-                    {
-                        ((IUserTrackable)entry.Entity).CreatedBy = _requestContext.CurrentUserID;
-                    }
-
-                    ((IUserTrackable)entry.Entity).ModifiedBy = _requestContext.CurrentUserID;
-                }
-            }
-        }
+        
+     
     }
 }

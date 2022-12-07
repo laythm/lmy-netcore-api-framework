@@ -5,6 +5,7 @@ using Common.Helpers;
 using Common.Interfaces;
 using Common.Models.Common;
 using Common.Models.Users;
+using Infrastructure;
 using Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -26,19 +27,23 @@ namespace Services.Services
 
     public class UsersService : IUsersService
     {
-        DbContext _dbContext;
+        private readonly IRequestContext _requestContext;
+        private readonly IGenericUnitOfwork<LmyFrameworkDBContext> _unitOfWork;
         private readonly IGenericRepository<Users> _repoUsers;
         private readonly IGenericRepository<UserRoles> _repoUserRoles;
         private readonly IGenericRepository<Roles> _repoRoles;
         IConfiguration _configuration;
 
-        public UsersService(DbContext dbContext,
+        public UsersService(
+            IRequestContext requestContext,
+            IGenericUnitOfwork<LmyFrameworkDBContext> unitOfWork,
             IGenericRepository<Users> repoUsers,
             IGenericRepository<UserRoles> repoUserRoles,
             IGenericRepository<Roles> repoRoles,
             IConfiguration configuration)
         {
-            _dbContext = dbContext;
+            _requestContext = requestContext;
+            _unitOfWork = unitOfWork;
             _repoUsers = repoUsers;
             _repoUserRoles = repoUserRoles;
             _repoRoles = repoRoles;
@@ -94,7 +99,7 @@ namespace Services.Services
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }
@@ -250,7 +255,7 @@ namespace Services.Services
                     return userModel;
                 }
 
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
                 Users user = new Users();
 
                 Mapper.Fill(userModel, user, x => x.CreatedBy, x => x.CreationDate, x => x.ModifiedBy, x => x.ModifiedDate);
@@ -271,14 +276,14 @@ namespace Services.Services
                     await _repoUserRoles.InsertAsync(userRole);
                 }
 
-                await _dbContext.SaveChangesAsync();
-                await _dbContext.Database.CommitTransactionAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }
@@ -297,7 +302,7 @@ namespace Services.Services
                     return userModel;
                 }
 
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
                 Users user = await _repoUsers.Query(x => x.ID == userModel.ID)
                     .Include(x => x.UserRoles.Where(x => !x.IsDeleted))
                     .FirstOrDefaultAsync();
@@ -331,14 +336,14 @@ namespace Services.Services
                     await _repoUserRoles.InsertAsync(userRole);
                 }
 
-                await _dbContext.SaveChangesAsync();
-                await _dbContext.Database.CommitTransactionAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
 
                 throw;
             }
@@ -352,7 +357,7 @@ namespace Services.Services
 
             try
             {
-                _dbContext.Database.BeginTransaction();
+                _unitOfWork.BeginTransaction();
 
                 Users user = await _repoUsers.Query(x => x.ID == id)
                     .Include(x => x.UserRoles.Where(x => !x.IsDeleted))
@@ -367,15 +372,52 @@ namespace Services.Services
                 });
 
                 await _repoUsers.UpdateAsync(user);
-                await _dbContext.SaveChangesAsync();
+                await _unitOfWork.SaveChangesAsync(_requestContext.CurrentUserID);
 
-                await _dbContext.Database.CommitTransactionAsync();
+                _unitOfWork.Commit();
 
                 model.AddSuccess(ApiMessages.Success);
             }
             catch (Exception ex)
             {
-                _dbContext.Database.RollbackTransaction();
+                _unitOfWork.RollBack();
+
+                throw;
+            }
+
+            return model;
+        }
+
+        public async Task<BaseModel> ValidateToken(string token)
+        {
+            BaseModel model = new BaseModel();
+
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_configuration["AppSettings:TokenSecret"]);
+
+                tokenHandler.ValidateToken(token, new TokenValidationParameters
+                {
+                    ValidIssuer= _configuration["AppSettings:TokenIssuer"],
+                    ValidAudience= _configuration["AppSettings:TokenIssuer"],
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    // set clockskew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
+                    ClockSkew = TimeSpan.Zero
+                }, out SecurityToken validatedToken);
+
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                var userId =  jwtToken.Claims.First(x => x.Type == ClaimTypes.Name).Value;
+                var roles = string.Join(",", jwtToken.Claims.Where(x => x.Type == ClaimTypes.Role).Select(x => x.Value).ToList());
+
+                model.AddSuccess(ApiMessages.Success+$" userID ={userId}, roles={roles}");
+            }
+            catch (Exception ex)
+            {
+                _unitOfWork.RollBack();
 
                 throw;
             }

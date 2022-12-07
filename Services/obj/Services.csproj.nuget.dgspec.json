@@ -1,18 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\Services.csproj": {}
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj": {
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -45,7 +48,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,19 +58,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -82,8 +89,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj"
+              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj"
               }
             }
           }
@@ -109,7 +116,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -118,19 +126,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\Services.csproj": {
+    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Services\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -146,11 +157,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Common\\Common.csproj"
+              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj"
               },
-              "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Desktop\\Github\\lmyApiFramework\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -188,7 +199,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -197,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

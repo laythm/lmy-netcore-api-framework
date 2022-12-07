@@ -22,3 +22,16 @@ C:\Users\admin\Desktop\Github\lmyApiFramework\Infrastructure\obj\Debug\netcoreap
 C:\Users\admin\Desktop\Github\lmyApiFramework\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
 C:\Users\admin\Desktop\Github\lmyApiFramework\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
 C:\Users\admin\Desktop\Github\lmyApiFramework\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\admin\Downloads\lmy-api-netcore-framework-master\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
