@@ -17,7 +17,7 @@ namespace Infrastructure
 
         }
 
-        public LmyFrameworkDBContext(DbContextOptions options)
+        public LmyFrameworkDBContext(DbContextOptions<LmyFrameworkDBContext> options)
             : base(options)
         {
         }
