@@ -93,7 +93,7 @@ namespace Api
             services.AddScoped<IRequestContext, RequestContext>();
 
             ////db context 
-            services.AddScoped<DbContext, LmyFrameworkDBContext>();
+ 
 
             ////Repositories
             services.AddScoped<IGenericRepository<Users>, GenericRepository<Users, LmyFrameworkDBContext>>();

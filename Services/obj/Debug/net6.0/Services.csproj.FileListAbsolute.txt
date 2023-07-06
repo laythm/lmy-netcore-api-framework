@@ -1,0 +1,17 @@
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Services.deps.json
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Services.dll
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Services.pdb
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Common.dll
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Infrastructure.dll
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Common.pdb
+D:\lmy\github\lmy-netcore-api-framework\Services\bin\Debug\net6.0\Infrastructure.pdb
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.dll
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\refint\Services.dll
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\Services.pdb
+D:\lmy\github\lmy-netcore-api-framework\Services\obj\Debug\net6.0\ref\Services.dll

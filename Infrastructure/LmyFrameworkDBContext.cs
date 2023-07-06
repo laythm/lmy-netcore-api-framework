@@ -11,7 +11,7 @@ namespace Infrastructure
 {
     public partial class LmyFrameworkDBContext : DbContext
     {
-   
+
         public LmyFrameworkDBContext()
         {
 
@@ -19,7 +19,7 @@ namespace Infrastructure
 
         public LmyFrameworkDBContext(DbContextOptions options)
             : base(options)
-        { 
+        {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -75,9 +75,28 @@ namespace Infrastructure
                     .HasMaxLength(128)
                     .ValueGeneratedNever();
             });
-        }
 
-        
-     
+            modelBuilder.Entity<Roles>()
+              .HasData(
+               new Roles { ID = "Admin", Name = "Admin" },
+               new Roles { ID = "ProjectManager", Name = "ProjectManager" });
+
+            modelBuilder.Entity<Users>()
+              .HasData(
+               new Users
+               {
+                   ID = "admin",
+                   FirstName = "admin",
+                   LastName = "admin",
+                   UserName = "admin",
+                   Email = "admin@admin.com",
+                   Password = "AM7eHj7czL/Fx6sC1hg6C19+h5MesLGZ9NRpgw81D3FuifHlPqn5ha/z2NzwW6iu3g==",//admin
+                   IsDeleted = false,
+                   CreatedBy = "admin",
+                   ModifiedBy = "admin",
+                   CreationDate = DateTime.Now,
+                   ModifiedDate = DateTime.Now
+               }); 
+        }
     }
 }

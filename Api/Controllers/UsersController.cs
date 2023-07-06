@@ -107,6 +107,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("Add")]
+        [AllowAnonymous]
         public async Task<BaseModel> Add(UserModel userModel)
         {
             BaseModel model = new BaseModel();

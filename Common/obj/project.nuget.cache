@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KprO8T9ZnZ45nRzh/ZvWSvQNb1XEA+kyFYVNUJbcWCwhsZXNeyDYXJzQJRL/RixA309HldhUV2KMmMDbkFkZaA==",
+  "dgSpecHash": "AwMOVkH25XpGy20+TGqVXmZTVko2xmn2RaiFa5jbrcSMSzf6GJBnBcOSO+NhSi812mmGedBaAnQQybovUCVEvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
+  "projectFilePath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,35 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj": {}
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\obj\\",
+        "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Layth Morrar\\.nuget\\packages\\",
+        "outputPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Layth Morrar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,8 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -58,39 +55,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\obj\\",
+        "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Layth Morrar\\.nuget\\packages\\",
+        "outputPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Layth Morrar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj"
+              "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj": {
+                "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj"
               }
             }
           }
@@ -102,12 +96,28 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
             }
           },
           "imports": [
@@ -126,42 +136,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj": {
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\lmy\\github\\lmy-netcore-api-framework\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Services\\obj\\",
+        "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Layth Morrar\\.nuget\\packages\\",
+        "outputPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Services\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Layth Morrar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
-                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj"
+              "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj": {
+                "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj"
               },
-              "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Infrastructure\\Infrastructure.csproj"
+              "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -173,24 +180,24 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.3, )"
+              "version": "[7.0.8, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[6.31.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.8.0, )"
+              "version": "[6.31.0, )"
             }
           },
           "imports": [
@@ -209,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

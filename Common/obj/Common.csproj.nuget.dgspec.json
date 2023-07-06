@@ -1,35 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {}
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj": {
+    "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
+        "projectUniqueName": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\lmy-api-netcore-framework-master\\Common\\obj\\",
+        "projectPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\Layth Morrar\\.nuget\\packages\\",
+        "outputPath": "D:\\lmy\\github\\lmy-netcore-api-framework\\Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Layth Morrar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,8 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -58,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -112,6 +112,7 @@ namespace Services.Services
 
         private bool IsValid(ProjectModel projectModel)
         {
+            projectModel.Errors.Clear();
             bool exist = _repoProjects
                 .Query(x =>
                     x.IsDeleted == false &&

@@ -215,6 +215,7 @@ namespace Services.Services
 
         private bool IsValid(UserModel userModel)
         {
+            userModel.Errors.Clear();
             var lst = _repoUsers.Query(x =>
                     x.IsDeleted == false &&
                     x.ID != userModel.ID &&

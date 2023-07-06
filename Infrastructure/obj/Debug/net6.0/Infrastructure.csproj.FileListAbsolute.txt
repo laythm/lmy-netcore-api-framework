@@ -1,0 +1,17 @@
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Common.dll
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Common.pdb
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\bin\Debug\net6.0\Infrastructure.runtimeconfig.json
+D:\lmy\github\lmy-netcore-api-framework\Infrastructure\obj\Debug\net6.0\Infrastructure.genruntimeconfig.cache
