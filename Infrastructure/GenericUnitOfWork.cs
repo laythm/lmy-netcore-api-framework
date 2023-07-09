@@ -44,9 +44,10 @@ namespace Infrastructure
             }
         }
 
-        public int SaveChanges()
+        public int SaveChanges(string currentUserID)
         {
-            throw new NotImplementedException();
+            setTracks(currentUserID);
+            return _dbContext.SaveChanges();
         }
 
         public async Task<int> SaveChangesAsync(string currentUserID, bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)

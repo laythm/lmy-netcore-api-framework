@@ -10,7 +10,7 @@ namespace Common.Interfaces
     //by using this IGenericUnitOfwork you can definde multiple unit of work for with multiple sql database
     public interface IGenericUnitOfwork<TContext>
     {
-        int SaveChanges();
+        int SaveChanges(string currentUserID);
         Task<int> SaveChangesAsync(string currentUserID,bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default);
         Task<int> SaveChangesAsync(string currentUserID,CancellationToken cancellationToken = default);
         void BeginTransaction();
